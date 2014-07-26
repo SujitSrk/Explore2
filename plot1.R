@@ -9,7 +9,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 NEI_YEAR <- aggregate(NEI$Emissions,by=list(Year=NEI$year),sum, na.rm=TRUE)
 
 # First column in the Aggregate is named Year
-# Second (Total Emissions) column is named x  
+# Second (Total Emissions) column is named x by default 
 # Plot the total emissions by year
 plot (NEI_YEAR$Year,NEI_YEAR$x, xlab="YEAR", ylab="PPM2.5", pch=20)
 fit <- lm (NEI_YEAR$x ~ NEI_YEAR$Year)
