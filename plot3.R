@@ -11,6 +11,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 NEI_BALTIMORE <- subset(NEI, fips == "24510")
 
 # Aggregate by Year and Type
+# Total Emissions column is named x by default
 NEI_BALTIMORE_YEARTYPE <- aggregate(NEI_BALTIMORE$Emissions,by=list(Year=NEI_BALTIMORE$year, Type=NEI_BALTIMORE$type),sum)
 
 # Plot using ggplot facets - one panel for each type
