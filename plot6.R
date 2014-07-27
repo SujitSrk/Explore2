@@ -53,5 +53,5 @@ legend("topright",  lty=1, col=c("black","red"), cex=0.7, legend=c("LA", "Baltim
 
 
 ##Copy plot to file 
-dev.copy(png,filename="plot5.png");
+dev.copy(png,filename="plot6.png");
 dev.off ();
